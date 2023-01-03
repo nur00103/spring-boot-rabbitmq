@@ -1,0 +1,52 @@
+{
+  "creditDetail": {
+    "amount": 2000.00,
+    "comission": 3,
+    "currency": "AZN",
+    "interestRate": 0,
+    "terms": 0
+  },
+  "customerDetail": {
+    "firstName": "Ali",
+    "lastName": "Aliyev",
+    "middleName": "ali",
+    "fin": "12te747",
+    "address": "Baku",
+    "familyMemberCount": 4,
+    "income": 700.00,
+    "otherIncome": 0,
+    "workPlace": "Br",
+    "position": "Developer",
+    "workExperience": 0.5,
+    "phoneList": [
+      {
+        "phoneNumber": "0556897657",
+        "descripiton": "sexsi"
+      }
+    ]
+  },
+  "guarantee": {
+      "guarantee":{
+     "firstName": "test",
+    "lastName": "test",
+    "middleName": "test",
+    "fin": "12te797",
+    "address": "Baku",
+    "familyMemberCount": 4,
+    "income": 700.00,
+    "otherIncome": 0,
+    "workPlace": "Br",
+    "position": "Developer",
+    "workExperience": 0.5,
+    "phoneList": [
+      {
+        "phoneNumber": "0558897657",
+        "descripiton": "sexsi"
+      }
+    ]
+      }
+    },
+  "user": {
+    "id": 1
+  }
+}
