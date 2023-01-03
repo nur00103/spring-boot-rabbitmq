@@ -1,5 +1,6 @@
 package com.example.springbootrabbitmq.rabbitMqConfig;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -17,7 +18,7 @@ public class RabbitConfig {
 
     @Bean
     public Queue queue(){
-        return new Queue(QUEUE_NAME);
+        return new Queue(QUEUE_NAME,false);
     }
     @Bean
     public TopicExchange exchange(){
@@ -35,11 +36,16 @@ public class RabbitConfig {
         return new Jackson2JsonMessageConverter();
     }
 
+//    @Bean
+//    public AmqpTemplate amqpTemplate(ConnectionFactory connectionFactory){
+//        RabbitTemplate rabbitTemplate=new RabbitTemplate(connectionFactory);
+//        rabbitTemplate.setMessageConverter(messageConverter());
+//        return rabbitTemplate;
+//    }
+
     @Bean
-    public AmqpTemplate amqpTemplate(ConnectionFactory connectionFactory){
-        RabbitTemplate rabbitTemplate=new RabbitTemplate(connectionFactory);
-        rabbitTemplate.setMessageConverter(messageConverter());
-        return rabbitTemplate;
+    public ModelMapper modelMapper(){
+        return new ModelMapper();
     }
 
 }

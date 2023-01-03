@@ -1,12 +1,10 @@
 package com.example.springbootrabbitmq.controller;
 
 import com.example.springbootrabbitmq.dto.request.OrderRequest;
+import com.example.springbootrabbitmq.entity.Order;
 import com.example.springbootrabbitmq.service.OrderService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
@@ -19,4 +17,6 @@ public class OrderController {
        orderService.publishMessage(orderRequest);
        return "Object sent to queue";
     }
+
+
 }
